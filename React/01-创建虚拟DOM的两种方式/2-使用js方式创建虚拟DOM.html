@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 引入react核心库 -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- 引入react-dom用于支持react操作dom -->
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- 使用js方式创建虚拟dom的话不需要引入babel进行转换，因为未使用到jsx语法 -->
+    <!-- 引入Babel，用于jsx转换成js -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <title>用js方式创建虚拟dom</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/JavaScript">
+      // const VDOM = React.createElement('h1', {id : 'title'}, 'hello world')
+      // 在h1标签里面嵌套span标签
+      const VDOM = React.createElement('h1', { id: 'title' }, React.createElement('span', { className : 'dom' }, 'hello world'))
+
+      ReactDOM.render(VDOM, document.getElementById('app'))
+    </script>
+  </body>
+</html>
