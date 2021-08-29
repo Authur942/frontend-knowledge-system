@@ -22,9 +22,19 @@
 
 ## 虚拟DOM
 
-虚拟DOM的本质就是 `Object `类型的一般对象。
+- 虚拟DOM的本质就是 `Object `类型的一般对象。
 
-虚拟DOM比较`轻`，真实DOM比较`重`，虚拟DOM是React内部使用的DOM。
+- 虚拟DOM比较`轻`，真实DOM比较`重`，虚拟DOM是React内部使用的DOM。
+- 创建虚拟DOM用 `React.createElement( 标签名，标签属性，标签的内容 )` 方法
+  - 参数：
+  - 标签名。
+  - 标签属性。
+  - 标签内容。
+- 渲染虚拟DOM用 `React.render( jsx模板，容器（挂载点），callback() )` 方法
+  - 参数：
+  - jsx模板。
+  - 容器（挂载点）。
+  - callback() 回调函数：当内容放到页面后触发的回调函数。
 
 ## JSX（JavaScript + XML）
 
@@ -125,3 +135,31 @@ const VDOM = ( // 定义虚拟DOM时不加双引号。
 ReactDOM.render(VDOM, document.getElementById('app'))
 ```
 
+## React面向组件编程
+
+- 函数式组件
+
+  > 需要注意的地方是：
+  >
+  > - 创建函数式组件时，**render**函数的第一个参数**JSX模板** 不再是变量名，而是加上函数式组件名，因为是react调用了该函数拿到返回的值，值得注意的是组件[首字母需要大写](###JSX语法规则)。
+  > - 函数式组件内部的this的指向不再是**window**，而是**undefined**，这是因为函数式组件的**JSX**模板经过**Babel**的转换，而**Babel**内部采用了严格模式进行编译，严格模式下不允许函数内部的**this**指向**window**。
+
+  ```jsx
+  const arr = ['angular', 'react', 'vue']
+  const myClass = 'title'
+  // 创建函数式组件
+  function VDOM() {
+    console.log(this)
+    return (
+      <div className={myClass}>
+        <h1>大家好，我是函数式组件</h1>
+      </div>
+    )
+  }
+  // 把组件渲染到页面上
+  ReactDOM.render(<VDOM />, document.getElementById('app'))
+  ```
+
+  
+
+- 类式组件
