@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * @param {Object} a
+			 * - 在函数作用域中，输出遵循的是就近原则，所谓就近原则就是向上一级寻找变量。
+			 * - 但是在函数作用域中声明的变量如果在执行语句之后，在没有形参的情况下
+			 * 		会调用函数会返回undefined，如果有形参的情况下console中输出的变量
+			 * 		也会寻找形参，在没有实参的情况下也会返回undefined
+			 */
+			var a = 123;
+			function fun(a){
+				console.log("a = " + a);
+				var a = 34;
+				window.a = 456;
+				
+			}
+			fun();
+			console.log("a = " + a);
+			// console.log()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr = new Array();
+			arr[0] = 12;
+			arr[1] = 14;
+			arr[5] = 11;
+			console.log(arr.length);//6
+			/**
+			 * 上面可以看出arr.length可以返回数组索引值的最大值，在非连续性数组中不要运用
+			 * length。
+			 * 
+			 */
+			
+			/**
+			 * 如何在只想在数组的最后一位索引+1的情况下添加值呢？
+			 * 语法：
+			 * 		arr[arr.length] = 12;
+			 */
+			var arr2 = new Array();
+			arr2[arr2.length] = 10;
+			arr2[arr2.length] = 11;
+			arr2[arr2.length] = 13;
+			arr2[arr2.length] = 14;
+			arr2[arr2.length] = 15;
+			console.log(arr2);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

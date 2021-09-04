@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * arr.push()
+			 * 	- push()方法可以向方法中传入参数向数组中的末尾添加多个元素。
+			 * 	- push()方法的返回值是数组的新的长度。
+			 */
+			var arr = ["孙悟空","唐僧","蜘蛛精","猪八戒"];
+			var result = arr.push("沙和尚");
+			console.log("result = " + result);//result = 5
+			
+			/**
+			 * arr.pop()
+			 * 	- pop()方法可以删除数组中末尾的最后一个元素。
+			 *  - 并将把删除的元素作为返回值返回。
+			 */
+			var arr2 = ["孙悟空","唐僧","蜘蛛精","猪八戒"];
+			var result2 = arr2.pop();
+			console.log("result2 = " + result2);//result = 沙和尚
+			console.log(arr2);// ["孙悟空", "唐僧", "蜘蛛精"]
+			
+			/**
+			 * arr.unshift()
+			 * 	- unshift()方法跟push()方法类似，只是在数值的开头传入值，并将各个元素的索引依次调整
+			 *  - unshift()返回值是添加新值之后的数组的长度。
+			 */
+			var arr3 = ["孙悟空","唐僧","蜘蛛精","猪八戒"];
+			var result3 = arr3.unshift("二郎神","红孩儿");
+			console.log("result3 = " + result3);//result = 6
+			console.log(arr3);//["二郎神", "红孩儿", "孙悟空", "唐僧", "蜘蛛精", "猪八戒"]
+			
+			/**
+			 * arr.shift();
+			 * - shift()方法是删除数组开头的值，和pop()方法类似。
+			 * - 被删除的数值作为返回值返回。
+			 */
+			var arr4 = ["孙悟空","唐僧","蜘蛛精","猪八戒"];
+			var result4 = arr4.shift();
+			console.log("result4 =" + result4);//result4 =孙悟空
+			console.log(arr4);//["唐僧", "蜘蛛精", "猪八戒"]
+			console.log(arr4.toString());//唐僧,蜘蛛精,猪八戒
+			
+			
+			var obj = new Object();
+			console.log(obj);
+			console.log(obj.toString());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

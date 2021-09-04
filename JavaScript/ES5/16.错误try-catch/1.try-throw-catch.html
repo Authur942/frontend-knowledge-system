@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="demo" type="text">
+  <button type="button" onclick="myfunction()">登录</button>
+  <p id="message"></p>
+  <span>密码：</span><input type="text">
+  <script>
+    function myfunction(){
+      var message,x;
+      message = document.getElementById('message');
+      message.value = "";
+      x = document.getElementById('demo').value;
+      try {
+        if (x == "") throw '值为空'
+        if (isNaN(x)) throw '不是数字'
+        x = Number(x);
+        if (x < 5) throw '账号长度太短'
+        if (x > 10) throw '账号长度过长'
+      } catch (error) {
+        message.innerHTML = error;
+      }
+      console.log(document.getElementById('demo'))
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var name = "唐僧";
+			function fun(){
+				console.log("我的名字叫做" + this.name);
+			}
+			var obj = {
+				name:"孙悟空",
+				age:12,
+				address:"花果山",
+				sayName:fun
+			}
+			var obj2 = {
+				name:"猪八戒",
+				age:12,
+				address:"高老庄",
+				sayName:fun
+			}
+			fun();
+			obj.sayName();
+			obj2.sayName();
+			/**
+			 * 解析器在调用函数时每次都会向函数内部传递一个隐藏的参数this,
+			 * 而这个this就是函数执行的上下文对象。	
+			 * - 用函数形式调用时，this指向的是window对象里的name值,
+			 * - 而用方法的形式调用时，则指向调用对象的name值
+			 */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

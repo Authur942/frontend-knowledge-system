@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /**
+     * 1.正则表达式的语法：
+     *    - var 变量 = new RegExp('正则表达式','匹配模式')
+     * 2.字面量语法：
+     *    - var 变量 = /正则表达式/匹配模式
+     * 
+     * 3.构造函数与字面量之间的区别：
+     *    - 在于构造函数相对比较灵活
+     * 
+     * 4.匹配模式：
+     *    - i 表示忽略大小写 
+     *    - g 表示全局匹配
+     *    - m 表示多行匹配
+     * 
+     * 5.test()方法是RegExp()的验证方法
+     *    - 返回布尔值
+     * 
+     * 6.方括号用来表示集合内的元素都表示 “或” 的关系
+     *    - [a-z]任意小写字母
+     *    - [0-9]任意数字
+     *    - [^ab]表示除了里面的内容是否包含其他
+     */
+    // 例1：
+    var reg = new RegExp('a','i');
+    console.log(reg);
+    var str = 'a';
+    console.log(reg.test(str));
+
+    // 例2：
+    var reg = /a/i
+    var str = 'b'
+    console.log(reg.test(str));
+
+    // 创建一个正则表达式来检查一个字符串中是否含有字母
+    var reg = /a|b|c/
+    var str = 'a'
+    console.log(reg.test(str));
+
+    // []里面的内容可以表示 ‘或’ 的关系
+    // [ab] == a|b
+    var reg = /[abc]/
+    var str = 'c'
+    console.log(reg.test(str));
+
+    // [^ab]表示除了里面的内容是否包含其他
+    var reg = /^ab/
+    var str = 'abc'
+    console.log(reg.test(str)); //true
+
+    // 创建一个正则表达式检查字符串中是否含有abc 或adc 或aec
+    var reg = /a[bde]c/
+    var str = 'abc'
+    console.log(reg.test(str));
+  </script>
+</body>
+</html>

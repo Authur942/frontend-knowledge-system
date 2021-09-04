@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr = new Array();
+			arr[0] = 1;
+			arr[1] = 2;
+			
+			// 字面量形式
+			var arr2 = [1,2,3,4];
+			
+			/**
+			 * - 在构造函数里面只传一个参数的时候，默认设置为数组的长度。
+			 * - 如果传入多个参数时，即是传入数组的值。
+			 */
+			var arr3 = new Array(10,20,30);//
+			console.log(arr3);//[10,20,30]
+			console.log(arr3.toString());//10,20,30
+			
+			var arr4 = new Array(10);
+			console.log(arr4);
+			console.log(arr4.toString());//,,,,,,,,,
+			
+			/**
+			 * - 数组本身就是一个对象，里面可以添加任意数据类型的值。
+			 */
+			var arr5 = [1,"顺悟空",true,null,undefined];
+			console.log(arr5);//[1, "顺悟空", true, null, undefined]
+			
+			var arr6 = [function(){console.log("我是匿名函数1")},function(){console.log("我是匿名函数2")}];
+			console.log(arr6);//[ƒ, ƒ]
+			arr6[0]();//1 调用函数
+			
+			var arr7 = [[1,2,3],[2,3,4],[4,5,6]];//数组里面添加数组，被称为二维数组。
+			console.log(arr7);//[Array(3), Array(3), Array(3)]
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

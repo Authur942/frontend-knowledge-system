@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/**
+			 * 创建一个构造函数
+			 */
+			function Person(name,age){
+				this.name = name;
+				this.age = age;
+				/*
+				this.sayName = function(){
+					console.log("我是" + this.name + "，今年" + this.age + "岁了");
+				};
+				*/
+			}
+			// 在这里要注意的是，如果把函数放在全局作用域里面的话，在开发中不能够协调，导致命名冲突的问题。
+			/*
+			function fun(){
+				console.log("我是" + this.name + "，今年" + this.age + "岁了");
+			}
+			*/
+		   //所以直接在原型中添加sayName方法
+		   Person.prototype.sayName = function(){
+				console.log("我是" + this.name + "，今年" + this.age + "岁了");
+			}
+			
+			
+			var zhubajie = new Person("猪八戒",12);
+			var sunwukong = new Person("孙悟空",14);
+			
+			zhubajie.sayName();
+			sunwukong.sayName();
+			
+			console.log(zhubajie.__proto__ == Person.prototype);
+			
+			console.log(zhubajie.sayName == sunwukong.sayName);
+			
+			
+			console.log(zhubajie.__proto__.hasOwnProperty("sayName"));
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function date(){
+      console.log(arguments)
+    }
+    date('a','b','c')
+    // Arguments(3) ["a", "b", "c", callee: ƒ, Symbol(Symbol.iterator): ƒ]
+    //   0: "a"
+    //   1: "b"
+    //   2: "c"
+    //   callee: ƒ date()
+    //   length: 3
+    //   Symbol(Symbol.iterator): ƒ values()
+    //   __proto__: Object
+
+    function data(...rest){
+      console.log(rest)
+    }
+    data('a','b','c')
+    // (3) ["a", "b", "c"]
+    // 0: "a"
+    // 1: "b"
+    // 2: "c"
+    // length: 3
+    // __proto__: Array(0)
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ch-zn">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<script type="text/javascript">
+			// 高富帅三个条件判断
+			// 身高180，财富1000万，颜值100以上
+			// 满足三个条件，一定嫁给他。
+			// 满足其一条件，嫁吧，比上不足比下有余
+			// 如果三个条件不满足则不嫁
+
+			var height = prompt("请输入你的身高(CM)：");
+			var money = prompt("请输入你的财富(万)：");
+			var face = prompt("请输入你的颜值(px)：");
+
+			if (height > 180 && money > 1000 && face > 100) {
+				alert("我一定要嫁给他");
+			} else if (height > 180 || money > 1000 || face > 100) {
+				alert("嫁吧，比上不足比下有余");
+			} else {
+				alert("不嫁");
+			}
+		</script>
+	</head>
+
+	<body>
+
+	</body>
+
+</html>

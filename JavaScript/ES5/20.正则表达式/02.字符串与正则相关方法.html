@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // split()方法 可以将字符串分割成数组
+    var str = '1a2b3c4e5f6g7';
+    var result = str.split('c');
+    console.log('result = ' + result);
+    console.log('result的长度为 ' + result.length);
+    var result2 = str.split(/[a-z]/);
+    console.log('result2 = ' +result2);
+    console.log('result2的长度为 '+ result2.length);
+ 
+    // search()方法 检索与正则表达式相匹配的索引值
+    /**
+     * 注！！！这个方法只会查找到第一个，即使设置了global全局查找也无效
+     */
+    var str = '1a2b3c4e5f6g7';
+    var result = str.search(/[a-z]/g);
+    console.log('当前检索的索引值为：'+result);
+
+    //match()方法 可以根据正则表达式，从一个字符串中提取出符合条件的内容
+    /**
+     * 因为是惰性的，当它检索到第一个内容时就会返回索引值
+     */
+    var str = '1a2b3c4e5f6g7';
+    var result = str.match(/[a-z]/g);
+    console.log('提取出来的结果为：' + result);
+
+    // replace()方法 可以将字符串的指定内容替换成新的内容
+    var str = '1a2b3c4e5f6g7';
+    var result = str.replace(/[a-z]/g,'@_@');
+    console.log('替换后的内容是：'+result);
+  </script>
+</body>
+</html>l

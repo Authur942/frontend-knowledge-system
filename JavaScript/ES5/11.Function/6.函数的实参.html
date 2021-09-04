@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function sayhello(o){
+				console.log(o.name + o.age + o.address);
+			}
+			var obj = {
+				name:"孙悟空",
+				age:12,
+				address:"花果山"
+			}
+			function fun2(a){
+				// console.log("a = " + a);
+				a(obj);
+				
+			}
+			fun2(sayhello);
+			// 
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    var a = 123;
+
+    a = 456;//true
+    a = Infinity;//true
+    a = 1.23;//true
+    a = -123;//true
+    a = 0;//false
+    a = NaN;
+    /**
+     * 转换为布尔类型的时候使用boolean()函数
+     * 数字 ---> 布尔值
+     *  1.除了0和NaN，其他的都转换为true
+     */
+
+    a = Boolean(a);//转换为true
+
+    a = "123";
+    a = "jsiajdi";
+    a = "";
+
+    // 空字符串转换为false,其余都是true
+
+    a = null;
+    a = undefined;
+    // null和undefined都转换为false
+
+    a = Boolean(a);
+
+
+    console.log(typeof a);
+    console.log(a);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
