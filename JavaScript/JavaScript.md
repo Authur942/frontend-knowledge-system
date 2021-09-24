@@ -167,3 +167,56 @@ console.log(a)
   - 这种方式专门用来对付字符串
   - `parseInt()` 把一个字符串转换为一个整数
   - `parseInt()`
+
+## 防抖和节流
+
+**防抖**
+
+```js
+/**
+ * 防抖函数
+ * @fn 需要执行的函数
+ * @delay 毫秒，防抖期限值
+ */
+// 旧代码
+function debounce (fn, delay) {
+  let timer = null //借助闭包
+  return function () {
+    if (timer) {
+      clearTimeout(timer)
+      timer = setsetTimeout(fn, delay)
+    } else {
+			timer = setTimeout(fn, delay)
+    }
+  }
+}
+
+// 简化后的代码
+function debounce (fn, delay) {
+  let timer = null
+  return function () {
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(fn, delay)
+  }
+}
+
+function showTop () {
+  var scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+  console.log('滚动条位置：' + scrollTop)
+}
+
+export { debounce, showTop }
+
+// 在Vue项目中引入
+import { debounce, showTop } from '@/...'
+
+window.onscroll = debounce(showTop, 1000)
+```
+
+**节流**
+
+```js
+```
+

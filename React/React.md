@@ -1,6 +1,6 @@
 # React（用于构建用户界面的JavaScript库）
 
-> `React`是一个将数据渲染为HTML视图的开源JavaScript库
+> `React`是一个将数据渲染为HTML视图的开源JavaScript库。
 
 ## React 的特点：
 
@@ -8,12 +8,19 @@
 2. 在`React Native`中可以使用`React`进行移动端 `Android` 和 `ios` 应用的开发。
 3. 使用虚拟DOM+`diffing`算法，尽量减少与真实DOM的交互。
 
+## 与Vue相比的区别：
+
+> 两者都是做组件化的，整体的功能都类似，但是它们的设计思路是有很多的不同的，使用React和Vue主要是理解它们设计思路的不同。
+
+## 起步：
+
 ```html
 <!-- 引入react核心库 -->
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
 <!-- 引入react-dom用于支持react操作dom -->
 <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<!-- 引入Babel，用于jsx转换成js -->
+<!-- 引入Babel，用于JSX转换成js -->
+<!-- 在书写JSX语法时，Babel的作用体现的格外重要，因为浏览器无法识别JSX的语法代码，所以需要通过Babel进行转换成浏览器可识别的JS -->
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <!-- 在使用JSX方式创建虚拟DOM时，必须加上type="text/babel" -->
