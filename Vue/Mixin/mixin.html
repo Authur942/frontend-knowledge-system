@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="mixins-basic"></div>
+		<script src="https://unpkg.com/vue@next"></script>
+		<script>
+			// 定义一个 mixin 对象
+			const myMixin = {
+        data () {
+          return {
+            h1: 'hello',
+            h2: 'mixin'
+          }
+        },
+				created() {
+					this.hello()
+				},
+				methods: {
+					hello () {
+						console.log('hello from mixin!')
+					}
+				}
+			}
+      const myMixin2 = {
+        data () {
+          return {
+            h1: 'hello2',
+            h2: 'mixin2',
+            h3: 'mixin2'
+          }
+        },
+        created() {
+          this.hello2 ()
+        },
+        methods: {
+          hello2 () {
+            console.log('hello from mixin2')
+          }
+        },
+      }
+
+			// 定义一个使用此 mixin 对象的应用
+			const app = Vue.createApp({
+				mixins: [myMixin2],
+        data() {
+          return {
+            h1: 'main',
+            h2: 'main2'
+          }
+        },
+        created () {
+          console.log('组件钩子被调用')
+          console.log(this.$data)
+          console.log(this.h3)
+        },
+			})
+
+			app.mount('#mixins-basic') // => "hello from mixin!"
+		</script>
+	</body>
+</html>
