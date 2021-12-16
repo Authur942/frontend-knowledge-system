@@ -1,0 +1,138 @@
+{
+    "root": {
+        "data": {
+            "id": "cggkjb0m5hk0",
+            "created": 1639641875553,
+            "text": "frontend-knowledge-system",
+            "background": "#ff0000",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cggkkkspp200",
+                    "created": 1639641975208,
+                    "text": "JavaScript",
+                    "background": "#ff0000",
+                    "color": "#ffffff",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cggkn80jfbs0",
+                            "created": 1639642182475,
+                            "text": "语句",
+                            "expandState": "expand",
+                            "color": "black"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cggkko9bf9k0",
+                                    "created": 1639641982742,
+                                    "text": "if else",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkkqnui9s0",
+                                    "created": 1639641987974,
+                                    "text": "for",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkks4djls0",
+                                    "created": 1639641991150,
+                                    "text": "for in",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cggkopg8iv40",
+                                            "created": 1639642298794,
+                                            "text": "用于遍历对象的可枚举对象"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkktwpos80",
+                                    "created": 1639641995041,
+                                    "text": "for of",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cggkof3lm140",
+                                            "created": 1639642276262,
+                                            "text": "用于遍历可迭代对象的元素"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkkvnodjc0",
+                                    "created": 1639641998848,
+                                    "text": "do white",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkl14hc8o0",
+                                    "created": 1639642010748,
+                                    "text": "white",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkl2ft78g0",
+                                    "created": 1639642013610,
+                                    "text": "with",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkl4ab28o0",
+                                    "created": 1639642017630,
+                                    "text": "break",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cggkl6yxytk0",
+                                    "created": 1639642023474,
+                                    "text": "continue",
+                                    "expandState": "expand"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "snow-compact",
+    "version": "1.4.43"
+}
